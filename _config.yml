@@ -22,6 +22,9 @@ social:
 
 timezone: Etc/UTC
 
+sass:
+  style: compressed
+
 collections:
   staff_members:
     output: false
