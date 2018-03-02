@@ -1,0 +1,15 @@
+---
+title: People
+heading: People
+---
+
+<section class="diagonal">
+	<div class="container">
+		<ul class="image-grid">
+			{% assign sortedmembers = site.people | sort: 'joindate' %}
+			{% for member in sortedmembers %}
+				<li>{% include staff-member.html member=member %}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

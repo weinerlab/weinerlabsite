@@ -26,7 +26,7 @@ sass:
   style: compressed
 
 collections:
-  staff_members:
+  people:
     output: false
   clients:
     output: true
@@ -72,7 +72,7 @@ defaults:
           height: 2000
   - scope:
       path: ""
-      type: "staff_members"
+      type: "people"
     values:
       _options:
         image_path:

@@ -1,7 +1,26 @@
-<a target="_blank" href="https://twitter.com/{{ include.member.twitter }}">
-	<div class="square-image"><img src="{% include relative-src.html src=include.member.image_path %}" alt="{{ include.member.name }}"/></div>
-	<div class="details">
-		<div class="name">{{ include.member.name }}</div>
-		<div class="position">{{ include.member.position }}</div>
+<div class="circle-image"><img src="{% include relative-src.html src=include.member.image_path %}" alt="{{ include.member.name }}"/></div>
+<div class="details">
+	<div class="overflow"><a href="{{ include.member.title }}" class="name">{{ include.member.name }}</a></div>
+	<div class="overflow"><div class="position">{{ include.member.position }}</div></div>
+	{% if include.member.projects != nil %}
+	<div class="overflow">
+		<ul class="projects">
+			{% for project in include.member.projects %}
+			<li class="blog-filter"><a href="{{ site.baseurl }}/projects/{{ project }}/">{{ project }}</a></li>
+			{% endfor %}
+		</ul>
 	</div>
-</a>
+	{% endif %}
+	<ul class="icons">
+		{% if include.member.twitter != nil %}
+		<li><a href="https://twitter.com/{{ include.member.twitter }}">{% include social-icon.html icon="Twitter" %}</a></li>
+		{% endif %}
+		{% if include.member.github != nil %}
+		<li><a href="https://github.com/{{ include.member.github }}">{% include social-icon.html icon="Github" %}</a></li>
+		{% endif %}
+		{% if include.member.linkedin != nil %}
+		<li><a href="https://linkedin.com/in/{{ include.member.linkedin }}">{% include social-icon.html icon="LinkedIn" %}</a></li>
+		{% endif %}
+	</ul>
+</div>
+<!-- </a> -->
