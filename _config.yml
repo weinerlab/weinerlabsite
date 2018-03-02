@@ -28,7 +28,7 @@ sass:
 collections:
   people:
     output: false
-  clients:
+  projects:
     output: true
 
 paginate: 10
@@ -63,9 +63,18 @@ defaults:
           height: 2000
   - scope:
       path: ""
-      type: "clients"
+      type: "projects"
     values:
-      layout: "client"
+      layout: "project"
+      _options:
+        image_path:
+          width: 2000
+          height: 2000
+  - scope:
+      path: ""
+      type: "people"
+    values:
+      layout: "post"
       _options:
         image_path:
           width: 2000
@@ -88,17 +97,3 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-
-# -----------
-# CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS

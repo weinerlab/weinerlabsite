@@ -1,9 +1,9 @@
 links:
-- name: Portfolio
-  link: /portfolio/
+- name: Projects
+  link: /projects/
 - name: Blog
   link: /blog/
 - name: People
   link: /people/
-- name: Contact
-  link: /contact/
+- name: Join
+  link: /join/
