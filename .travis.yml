@@ -1,7 +1,7 @@
 language: ruby
 
 script:
-  - bundle exec jekyll build
+  - bundle exec jekyll build --baseurl=/weinerlabsite
 
 deploy:
   provider: pages
